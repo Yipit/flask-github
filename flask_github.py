@@ -144,10 +144,7 @@ class GithubAuth(object):
         Checks to see if the authenticated user is a member of the given
         organization.
         """
-        path = 'orgs/' + organization + '/members'
-        resp, org_members = self.get_resource(path)
         user = self.github_user()
-        for member in org_members:
-            if member['login'] == user['login']:
-                return True
-        return False
+        path = 'orgs/{}/members/{}'.format(organization, user['login'])
+        resp, member = self.get_resource(path)
+        return resp.status_code == 204

@@ -8,8 +8,8 @@ from setuptools import setup
 
 
 setup(
-    name='Flask-Github',
-    version='0.1.3',
+    name='Flask-Github-yipit',
+    version='0.1.4',
     url='http://github.com/jarodl/flask-github',
     license='MIT',
     author='Jarod Luebbert',
