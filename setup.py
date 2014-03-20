@@ -9,7 +9,7 @@ from setuptools import setup
 
 setup(
     name='Flask-Github-yipit',
-    version='0.1.6',
+    version='0.1.7',
     url='http://github.com/jarodl/flask-github',
     license='MIT',
     author='Jarod Luebbert',
