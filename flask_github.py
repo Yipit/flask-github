@@ -146,5 +146,6 @@ class GithubAuth(object):
         """
         user = self.github_user()
         path = 'orgs/{}/members/{}'.format(organization, user['login'])
-        resp, member = self.get_resource(path)
-        return resp.status_code == 204
+        response = self.raw_request(
+            self.base_url, path, params=None, "GET", access_token=None)
+        return response == 204
